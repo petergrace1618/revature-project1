@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>ShivaCorp Employee Login</title>
+</head>
+
+<body>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>ShivaCorp Employee Login</h1>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div id="accordion">
+
+      <div class="card">
+        <div class="card-header" id="login">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle='collapse' data-target='#collapse1'>
+              Login
+            </button>
+          </h5>
+        </div>
+        <div id='collapse1' class="collapse show" data-parent='#accordion'>
+          <div class="card-body">
+
+            <form id='login-form'>
+
+              <div class="form-group">
+                <input id='login-username' 
+                      type="text" 
+                      class='form-control' 
+                      placeholder="Enter username" 
+                      pattern='[a-zA-Z0-9.-_@]+'
+                      maxlength="20"
+                      autocomplete="off"
+                      required>
+              </div>
+              
+              <div class="form-group">
+                <input id='login-password' 
+                      type="password" 
+                      class='form-control' 
+                      placeholder="Enter password" 
+                      maxlength="32"
+                      required>
+                <div class="invalid-feedback">Password must not be blank.</div>
+              </div>
+              
+              <button type="submit" id='login-button'>Login</button>
+            
+            </form>
+
+            <output id='login-results' style='display: none;' class='mt-4 text-danger'>Username or password is invalid</output>
+          </div> <!-- card-body -->
+        </div> 
+      </div> <!-- card -->
+      
+      <div class="card">
+        <div class="card-header" id="register">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle='collapse' data-target='#collapse2'>
+              Register
+            </button>
+          </h5>
+        </div>
+        <div id='collapse2' class="collapse" data-parent='#accordion'>
+          <div class="card-body">
+
+            <form id="register-form">
+
+              <div class="form-group">
+                <input id='register-fullname' 
+                      type="text" 
+                      placeholder="Enter full name" 
+                      class='form-control'
+                      autocomplete="off"
+                      required>
+              </div>
+              
+              <div class="form-group">
+                <input id="register-username" 
+                      type="text" 
+                      class='form-control' 
+                      placeholder="Enter username" 
+                      pattern='[a-zA-Z0-9.-_@]+'
+                      maxlength="20"
+                      autocomplete="off"
+                      required>
+              </div>
+    
+              <div class="form-group">
+                <input id='register-password' 
+                      type="password" 
+                      class='form-control' 
+                      placeholder="Enter password" 
+                      maxlength="32"
+                      required>
+              </div>
+    
+              <div class="form-group">
+                <input id='register-password-confirm' 
+                      type="password" 
+                      class='form-control' 
+                      placeholder="Confirm password" 
+                      maxlength="32"
+                      required>
+              </div>
+    
+              <button type="submit">Register</button>
+            </form>
+            
+            <output id='register-results' style='display: none;' class='mt-4'></output>
+        
+          </div> <!-- card-body -->
+        </div> 
+      </div> <!-- card -->
+
+    </div> <!-- accordion -->
+  
+  </div> <!-- container -->
+
+  <div class='jumbotron jumbotron-fluid mb-0 mt-4'>
+    <div class="container">
+      &copy; ShivaCorp Ltd 2021
+    </div>
+  </div>
+
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/shivacorp-employee-login.js"></script>
+</body>
+</html>

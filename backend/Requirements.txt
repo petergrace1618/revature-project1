@@ -1,0 +1,23 @@
+1)Project1 -> improvistaion of Project0
+2)You will be converting Project0 console based to Web based Application.
+3)Additionally now in the system there can be multiple employees(i.e) you can register the employee in to the system.
+4)We should now be able to see who was the employee who approved a particular customer.
+5)Customer should be able to view his previous transactions made.
+6)Employees will have multiple filters to search the transaction(by transaction id, transactionType,customerid,accountno,date)
+7)Customer should be able to open any number of accounts.
+
+
+Tech Stack
+------------------
+1)JavaLIN(backend) with 3 kayers in backend controller->service->dao
+2)DB will be still PostgresSQL
+3)Interaction with DB you can go with JDBC itself or you will be learning Hibernate next week you can apply that as well.
+4)You should have UI(html,css/bootstrap, javascript validations on frontend and use javacript either fetch or AJAX to make RESTful calls to backend Javalin)
+5)Maintain separate Login Screens for Employee and Customer.
+6)Communicate exceptions from server to client.
+7)Logging using log4j
+8)Minimum 10 Junit Test cases and 10 Mock cases.....
+
+
+Project 1 Presentations on 14th May. :)
+HTML(CSSorBS) ->validation JS->fetch JS (http call)->JAvalin server->service->DAO->DB

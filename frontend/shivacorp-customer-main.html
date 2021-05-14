@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>ShivaCorp Customer Main Menu</title>
+</head>
+<body>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1>Welcome to ShivaCorp</h1>
+        <p>The bank to end all banks</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h4 class='mb-4'>
+      Welcome, <span id="greeting-name"></span>. 
+      <button id='logout' class='btn btn-link'>Logout</button>
+    </h4>
+    
+    <!-- ACCOUNT PICKER -->
+    <div class='form-control'>
+      <select id="account-picker" class="custom-select custom-select-lg">
+        <option value='0'>Choose account</option>
+      </select>
+    </div>
+
+    <div class='form-control form-control-lg'>
+      <output id='balance-msg'>Balance: $<span>----</span></output>
+    </div>
+
+    <div id="accordion">
+
+      <div class="card">
+        <div class="card-header" id="apply-new-account">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle='collapse' data-target='#collapse1'>
+              Apply for new account
+            </button>
+          </h5>
+        </div>
+        <div id='collapse1' class="collapse" data-parent='#accordion'>
+          <div class="card-body">
+
+            <!-- APPLY FOR NEW ACCOUNT -->
+            <div class="form-group">
+              <p>We want your money! Open a new account today.</p>
+            </div>
+
+            <div class="form-group">
+              <button id='apply-btn' class='btn btn-info btn-lg btn-block'>
+                Apply Now
+              </button>
+            </div>
+
+            <div class="form-group">
+              <output id='new-account-msg' class='mt-3'></output>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="deposit">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle='collapse' data-target='#collapse3'>
+              Deposit funds
+            </button>
+          </h5>
+        </div>
+        <div id='collapse3' class="collapse" data-parent='#accordion'>
+          <div class="card-body">
+
+            <form id='deposit-form'>
+
+              <div class="form-group">
+                <input type="number" 
+                      id='deposit-amount' 
+                      class='form-control form-control-lg' 
+                      placeholder="Deposit amount"
+                      min='0.01'
+                      step='0.01'>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class='btn-lg btn-info'>Deposit</button>
+              </div>
+
+            </form>
+
+            <div class="form-group">
+              <p id='deposit-msg' class='mt-3' style="display: none;"></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="withdraw">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle='collapse' data-target='#collapse4'>
+              Withdraw funds
+            </button>
+          </h5>
+        </div>
+        <div id='collapse4' class="collapse" data-parent='#accordion'>
+          <div class="card-body">
+
+            <form id='withdraw-form'>
+              
+              <div class="form-group">
+                <input type="text" 
+                      id='withdraw-amount' 
+                      class='form-control form-control-lg' 
+                      placeholder="Withdrawal amount"
+                      min='0.01'
+                      step='0.01'>
+              </div>
+              
+              <div class="form-group">
+                <button type="submit" class='btn-lg btn-info'>Withdraw</button>
+              </div>
+            
+            </form>
+
+            <div class="form-group">
+              <p id='withdraw-msg' class='mt-3' style="display: none;"></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header" id="transfer">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle='collapse' data-target='#collapse5'>
+              Transfer funds
+            </button>
+          </h5>
+        </div>
+        <div id='collapse5' class="collapse" data-parent='#accordion'>
+          <div class="card-body">
+
+            <form id='transfer-form'>
+              
+              <div class="form-group">
+                <label id='transfer-from-account'>
+                  Please choose an account above to transfer funds from
+                </label>
+                <!-- <input id='transfer-from-account' 
+                      class=' form-control-lg form-control-plaintext' 
+                      type="text" 
+                      readonly> -->
+              </div>
+
+              <div class="form-group">
+                <input id='transfer-to-account' 
+                      class='form-control form-control-lg' 
+                      type="number" 
+                      placeholder="Transfer to account"
+                      min='100000'>
+              </div>
+              
+              <div class="form-group">
+                <input id='transfer-amount' 
+                      class='form-control form-control-lg' 
+                      type="number" 
+                      placeholder="Transfer amount"
+                      min='0.01'
+                      step='0.01'>
+              </div>
+              
+              <div class="form-group">
+                <button type="submit" class='btn-lg btn-info'>Transfer</button>
+              </div>
+            
+            </form>
+
+            <div class="form-group">
+              <p id='transfer-msg' class='mt-3' style="display: none;"></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <div class="card-header" id="view-transactions">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle='collapse' data-target='#collapse6'>
+              View transactions
+            </button>
+          </h5>
+        </div>
+        <div id='collapse6' class="collapse" data-parent='#accordion'>
+          <div class="card-body">
+
+            <table id='transactions-table' class='table table-bordered table-striped'>
+              <thead class='thead-dark'>
+                <tr>
+                  <!-- <th>Trans Id</th> -->
+                  <th>Trans Id</th>
+                  <th>Date</th>
+                  <th>Trans type</th>
+                  <th>Acct Id</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody id='transactions-table-body'>
+
+              </tbody>
+            </table>
+            
+            <div class="form-group">
+              <output id='transactions-msg' class='mt-3'>
+                Please choose an account to view transactions.
+              </output>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- accordion -->
+
+  </div> <!-- container -->
+    
+  <div class='jumbotron jumbotron-fluid mb-0 mt-4'>
+    <div class="container">
+      &copy; ShivaCorp Ltd 2021
+    </div>
+  </div>
+
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/shivacorp-customer-main.js"></script>
+</body>
+</html>

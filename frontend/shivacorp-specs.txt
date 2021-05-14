@@ -1,0 +1,126 @@
+=========
+Stories
+=========
+
+user:
+    login
+    register for customer acct
+customer:
+    apply for new bank acct w/ starting balance
+    view acct balance!!
+    make withdrawal/deposit to acct
+    post money transfer to another acct
+    accept money transfer from another acct
+employee:
+    approve/reject acct
+    view a customer's accounts
+    view log of all transactions
+
+=========
+TABLES
+=========
+
+Users
+-----
+id PK
+username
+pwd
+fullname
+usertype
+
+Accounts
+------
+acctno PK
+userid FK -> Users.id;
+balance
+status enum
+
+Transactions
+------------
+id PK
+acctno FK -> Accounts.acctno
+datetime
+transactiontype enum
+amount
+otheracct FK -> Accounts.acctno
+
+==========
+MENUS
+==========
+
+Main
+----
+Login
+Register for customer account
+Quit
+
+Main > Login
+-----
+Username:
+Password:
+
+Main > Register
+--------
+Username:
+Password:
+Confirm password:
+
+Customer
+--------
+apply for new bank acct w/ starting balance
+view acct balance
+withdrawal from acct
+deposit to acct
+transfer to another acct
+?accept money transfer from another acct
+logout
+
+Customer > Apply for new acct
+---------
+Initial balance
+Cancel
+
+Customer > View account balance
+---------
+Choose account
+Cancel
+
+Customer > Withdraw
+--------
+Choose account
+Cancel
+
+Customer > Deposit
+--------
+Choose account
+Cancel
+
+Customer > Transfer
+--------
+Transfer from account
+Transfer to account
+Cancel
+
+Employee
+--------
+approve/reject acct
+view a customer's accounts
+view log of all transactions
+Logout
+
+Employee > Approve/reject
+--------
+Choose account
+Approve
+Reject
+Cancel
+
+Employee > View account balance
+--------
+Choose account
+Cancel
+
+Employee > View transactions
+--------
+Choose account
+Cancel
