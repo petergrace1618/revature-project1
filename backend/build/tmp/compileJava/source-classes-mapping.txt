@@ -15,13 +15,13 @@ org/shivacorp/model/Account.java
 org/shivacorp/model/User.java
  org.shivacorp.model.User
  org.shivacorp.model.User$Usertype
-org/shivacorp/service/ShivacorpService.java
- org.shivacorp.service.ShivacorpService
 org/shivacorp/dao/ShivacorpDAO.java
  org.shivacorp.dao.ShivacorpDAO
-org/shivacorp/main/ShivacorpMain.java
- org.shivacorp.main.ShivacorpMain
-org/shivacorp/service/impl/ShivacorpServiceImpl.java
- org.shivacorp.service.impl.ShivacorpServiceImpl
 org/shivacorp/dao/impl/ShivacorpDAOImpl.java
  org.shivacorp.dao.impl.ShivacorpDAOImpl
+org/shivacorp/service/ShivacorpService.java
+ org.shivacorp.service.ShivacorpService
+org/shivacorp/service/impl/ShivacorpServiceImpl.java
+ org.shivacorp.service.impl.ShivacorpServiceImpl
+org/shivacorp/main/ShivacorpMain.java
+ org.shivacorp.main.ShivacorpMain

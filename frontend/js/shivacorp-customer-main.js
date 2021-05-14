@@ -99,17 +99,12 @@ $('#account-picker')[0].addEventListener('change', (ev)=>{
     console.log('Transactions',transactions);
     $('#transactions-table-body').empty();
 
-    // exception occurred
     if(transactions.message) {  
       $('#transactions-msg')
         .text(transactions.message)
         .show();
     
     } else {
-
-      if (transactions.value === 0) {
-        $('#')
-      }
 
       transactions.forEach((t)=>{
         let row = '<tr>'+

@@ -12,7 +12,9 @@ import java.util.Date;
 import java.util.List;
 
 public class ShivacorpServiceImpl implements ShivacorpService {
-    private final ShivacorpDAO dao = new ShivacorpDAOImpl();
+    private ShivacorpDAO dao;
+
+    public ShivacorpServiceImpl(ShivacorpDAO dao) { this.dao = dao; }
 
     //// CREATE
     @Override

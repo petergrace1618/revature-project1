@@ -1,6 +1,7 @@
 package org.shivacorp.main;
 
 import io.javalin.Javalin;
+import org.shivacorp.dao.impl.ShivacorpDAOImpl;
 import org.shivacorp.exception.ErrorMessage;
 import org.shivacorp.model.Account;
 import org.shivacorp.model.Transaction;
@@ -14,8 +15,9 @@ import java.util.List;
 
 public class ShivacorpMain {
     private static final Logger log = Logger.getLogger(ShivacorpMain.class);
+
     public static void main(String[] args) {
-        ShivacorpService service = new ShivacorpServiceImpl();
+        ShivacorpService service = new ShivacorpServiceImpl(new ShivacorpDAOImpl());
 
         Javalin app = Javalin
                 .create(config->config.enableCorsForAllOrigins())

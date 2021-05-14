@@ -33,21 +33,21 @@ public class User {
     }
 
     public User(String username, Usertype usertype) {
-        this.username = username;
+        this.username = username.toLowerCase();
 //        this.password = "";
 //        this.fullname = "";
         this.usertype = usertype;
     }
 
     public User(String username, String password, Usertype usertype) {
-        this.username = username;
+        this.username = username.toLowerCase();
         this.password = password;
 //        this.fullname = "";
         this.usertype = usertype;
     }
 
     public User(String username, String password, String fullName, Usertype usertype) {
-        this.username = username;
+        this.username = username.toLowerCase();
         this.password = password;
         this.fullname = fullName;
         this.usertype = usertype;
@@ -68,7 +68,7 @@ public class User {
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.username = username.toLowerCase();
     }
 
     public String getPassword() {
