@@ -11,13 +11,13 @@ Front end:
 
 Back end:
 - Javalin
-- RESTful service
+- RESTful API
 - JDBC
 - PostgreSQL
 
 ## Features
 Customers can: 
-- Create a login
+- Register for a login
 - Apply for an account
 - Deposit funds
 - Withdraw funds
@@ -47,9 +47,7 @@ To clone the repository
 ```
 git clone https://github.com/petergrace1618/revature-project1.git
 ```
-
-## Usage
-Open 
+Open the folder `backend` in IntelliJ. Run `ShivacorpMain()`. This starts the Javalin server to accept REST API requests. Then in Visual Studio Code open `frontend/shivacorp-customer-login.html` and `fronted/shivacorp-employee-login.html` and open with Live Server (must have VS Code Live Server extension installed) by right-clicking on the source and choosing "Open with Live Server" or press Alt-L Alt-O. Then register for an account and start creating money out of thin air just like real banks do!
 
 ## License
 Freely available under the [GNU General Public License version 3](https://opensource.org/licenses/GPL-3.0)
