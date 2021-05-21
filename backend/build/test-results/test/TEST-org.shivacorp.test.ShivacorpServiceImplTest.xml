@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.shivacorp.test.ShivacorpServiceImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-14T17:23:17" hostname="IAMYOURUNDEROOS" time="1.282">
+<testsuite name="org.shivacorp.test.ShivacorpServiceImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-14T19:51:20" hostname="IAMYOURUNDEROOS" time="2.635">
   <properties/>
-  <testcase name="loginAdminSuccess()" classname="org.shivacorp.test.ShivacorpServiceImplTest" time="1.282"/>
+  <testcase name="loginSuccessMixedCaseUsername()" classname="org.shivacorp.test.ShivacorpServiceImplTest" time="2.635"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

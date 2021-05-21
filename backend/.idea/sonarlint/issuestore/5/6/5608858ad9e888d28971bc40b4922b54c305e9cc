@@ -1,0 +1,14 @@
+
+A
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed.(Çµí‘
+B
+java:S1612",Replace this lambda with a method reference.(Ñ¸Ÿµ
+S	java:S106h"9Replace this use of System.out or System.err by a logger.(Âé’ùÿÿÿÿ
+O	java:S106¯"9Replace this use of System.out or System.err by a logger.(Û†­
+N	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(Ûüƒ6
+O	java:S106„"9Replace this use of System.out or System.err by a logger.(œ¥„
+T	java:S106†"9Replace this use of System.out or System.err by a logger.(± —¨úÿÿÿÿ
+T	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(é¤²•øÿÿÿÿ
+Q	java:S125½"<This block of commented-out lines of code should be removed.(Ö©ˆb

@@ -660,3 +660,119 @@
 2021-05-14 10:46:28,567 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":2,"username":"foo","password":"foo","fullname":"Foo Foo","usertype":"CUSTOMER"}
 2021-05-14 10:46:28,734 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/customerid/2
 2021-05-14 10:46:28,801 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"No accounts"}
+2021-05-14 12:03:54,461 [INFO] org.shivacorp.main.ShivacorpMain:App started
+2021-05-14 12:45:21,210 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /customer/foo
+2021-05-14 12:45:21,769 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":2,"username":"foo","password":"foo","fullname":"Foo Foo","usertype":"CUSTOMER"}
+2021-05-14 12:45:22,120 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/customerid/2
+2021-05-14 12:45:22,225 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"No accounts"}
+2021-05-14 12:45:48,033 [INFO] org.shivacorp.main.ShivacorpMain:Request: (POST) /account
+2021-05-14 12:45:48,167 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":100000,"user":{"id":2,"username":"foo","password":null,"fullname":"Foo Foo","usertype":"CUSTOMER"},"approvedBy":null,"balance":0.0,"status":"PENDING","userId":2}
+2021-05-14 12:45:55,579 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/id/100000
+2021-05-14 12:45:55,592 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /transactions/accountid/100000
+2021-05-14 12:45:55,678 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":100000,"user":{"id":2,"username":"foo","password":null,"fullname":"Foo Foo","usertype":"CUSTOMER"},"approvedBy":{"id":0,"username":null,"password":null,"fullname":null,"usertype":null},"balance":0.0,"status":"PENDING","userId":2}
+2021-05-14 12:45:55,711 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"No transactions"}
+2021-05-14 12:45:59,436 [INFO] org.shivacorp.main.ShivacorpMain:Request: (PUT) /deposit/100000/1
+2021-05-14 12:45:59,513 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"Account 100000 is pending or inactive."}
+2021-05-14 12:46:10,497 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /customer/admin
+2021-05-14 12:46:10,555 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"Invalid username"}
+2021-05-14 12:46:13,495 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /customer/admin
+2021-05-14 12:46:13,547 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"Invalid username"}
+2021-05-14 12:46:19,527 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /customer/admin
+2021-05-14 12:46:19,581 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"Invalid username"}
+2021-05-14 12:46:34,585 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /employee/admin
+2021-05-14 12:46:34,644 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":1,"username":"admin","password":"admin","fullname":"admin","usertype":"EMPLOYEE"}
+2021-05-14 12:46:34,830 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/status/pending
+2021-05-14 12:46:34,943 [INFO] org.shivacorp.main.ShivacorpMain:Response: [{"id":100000,"user":{"id":2,"username":"foo","password":null,"fullname":"Foo Foo","usertype":"CUSTOMER"},"approvedBy":{"id":0,"username":null,"password":null,"fullname":null,"usertype":null},"balance":0.0,"status":"PENDING","userId":2}]
+2021-05-14 12:46:45,109 [INFO] org.shivacorp.main.ShivacorpMain:Request: (PUT) /account/status
+2021-05-14 12:46:45,536 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":100000,"user":{"id":2,"username":"foo","password":null,"fullname":"Foo Foo","usertype":"CUSTOMER"},"approvedBy":{"id":1,"username":"admin","password":"admin","fullname":"admin","usertype":"EMPLOYEE"},"balance":0.0,"status":"APPROVED","userId":2}
+2021-05-14 12:46:55,757 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/id/100000
+2021-05-14 12:46:55,901 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":100000,"user":{"id":2,"username":"foo","password":null,"fullname":"Foo Foo","usertype":"CUSTOMER"},"approvedBy":{"id":1,"username":"admin","password":null,"fullname":"admin","usertype":"EMPLOYEE"},"balance":0.0,"status":"APPROVED","userId":2}
+2021-05-14 12:47:01,569 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/customerid/1
+2021-05-14 12:47:01,687 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"No accounts"}
+2021-05-14 12:47:05,205 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/customerid/2
+2021-05-14 12:47:05,387 [INFO] org.shivacorp.main.ShivacorpMain:Response: [{"id":100000,"user":{"id":2,"username":"foo","password":null,"fullname":"Foo Foo","usertype":"CUSTOMER"},"approvedBy":{"id":1,"username":"admin","password":null,"fullname":"admin","usertype":"EMPLOYEE"},"balance":0.0,"status":"APPROVED","userId":2}]
+2021-05-14 12:47:09,108 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/status/APPROVED
+2021-05-14 12:47:09,208 [INFO] org.shivacorp.main.ShivacorpMain:Response: [{"id":100000,"user":{"id":2,"username":"foo","password":null,"fullname":"Foo Foo","usertype":"CUSTOMER"},"approvedBy":{"id":1,"username":"admin","password":null,"fullname":"admin","usertype":"EMPLOYEE"},"balance":0.0,"status":"APPROVED","userId":2}]
+2021-05-14 12:47:16,226 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/balance/0
+2021-05-14 12:47:16,340 [INFO] org.shivacorp.main.ShivacorpMain:Response: [{"id":100000,"user":{"id":2,"username":"foo","password":null,"fullname":"Foo Foo","usertype":"CUSTOMER"},"approvedBy":{"id":1,"username":"admin","password":null,"fullname":"admin","usertype":"EMPLOYEE"},"balance":0.0,"status":"APPROVED","userId":2}]
+2021-05-14 12:47:22,608 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /transactions/id/1
+2021-05-14 12:47:22,743 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":1,"datetime":1621021605432,"transactionType":"ACCOUNT_APPROVED","accountId":100000,"amount":0.0}
+2021-05-14 12:47:48,131 [INFO] org.shivacorp.main.ShivacorpMain:Request: (POST) /customer
+2021-05-14 12:47:48,132 [INFO] org.shivacorp.main.ShivacorpMain:Body: {"fullname":"Goo","username":"goo","password":"goo","usertype":"CUSTOMER"}
+2021-05-14 12:47:48,255 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":3,"username":"goo","password":"goo","fullname":"Goo","usertype":"CUSTOMER"}
+2021-05-14 12:47:53,569 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /customer/goo
+2021-05-14 12:47:53,638 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":3,"username":"goo","password":"goo","fullname":"Goo","usertype":"CUSTOMER"}
+2021-05-14 12:47:53,814 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/customerid/3
+2021-05-14 12:47:53,916 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"No accounts"}
+2021-05-14 12:47:57,792 [INFO] org.shivacorp.main.ShivacorpMain:Request: (POST) /account
+2021-05-14 12:47:57,894 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":100001,"user":{"id":3,"username":"goo","password":null,"fullname":"Goo","usertype":"CUSTOMER"},"approvedBy":null,"balance":0.0,"status":"PENDING","userId":3}
+2021-05-14 12:47:58,309 [INFO] org.shivacorp.main.ShivacorpMain:Request: (POST) /account
+2021-05-14 12:47:58,414 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":100002,"user":{"id":3,"username":"goo","password":null,"fullname":"Goo","usertype":"CUSTOMER"},"approvedBy":null,"balance":0.0,"status":"PENDING","userId":3}
+2021-05-14 12:48:13,523 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/id/100002
+2021-05-14 12:48:13,538 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /transactions/accountid/100002
+2021-05-14 12:48:13,652 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":100002,"user":{"id":3,"username":"goo","password":null,"fullname":"Goo","usertype":"CUSTOMER"},"approvedBy":{"id":0,"username":null,"password":null,"fullname":null,"usertype":null},"balance":0.0,"status":"PENDING","userId":3}
+2021-05-14 12:48:13,666 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"No transactions"}
+2021-05-14 12:48:14,626 [INFO] org.shivacorp.main.ShivacorpMain:Request: (PUT) /deposit/100002/1000
+2021-05-14 12:48:14,717 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"Account 100002 is pending or inactive."}
+2021-05-14 12:48:23,461 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /employee/admin
+2021-05-14 12:48:23,622 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":1,"username":"admin","password":"admin","fullname":"admin","usertype":"EMPLOYEE"}
+2021-05-14 12:48:23,771 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/status/pending
+2021-05-14 12:48:23,878 [INFO] org.shivacorp.main.ShivacorpMain:Response: [{"id":100001,"user":{"id":3,"username":"goo","password":null,"fullname":"Goo","usertype":"CUSTOMER"},"approvedBy":{"id":0,"username":null,"password":null,"fullname":null,"usertype":null},"balance":0.0,"status":"PENDING","userId":3},{"id":100002,"user":{"id":3,"username":"goo","password":null,"fullname":"Goo","usertype":"CUSTOMER"},"approvedBy":{"id":0,"username":null,"password":null,"fullname":null,"usertype":null},"balance":0.0,"status":"PENDING","userId":3}]
+2021-05-14 12:48:33,964 [INFO] org.shivacorp.main.ShivacorpMain:Request: (PUT) /account/status
+2021-05-14 12:48:34,267 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":100002,"user":{"id":3,"username":"goo","password":null,"fullname":"Goo","usertype":"CUSTOMER"},"approvedBy":{"id":1,"username":"admin","password":"admin","fullname":"admin","usertype":"EMPLOYEE"},"balance":0.0,"status":"APPROVED","userId":3}
+2021-05-14 12:48:35,998 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/status/pending
+2021-05-14 12:48:36,090 [INFO] org.shivacorp.main.ShivacorpMain:Response: [{"id":100001,"user":{"id":3,"username":"goo","password":null,"fullname":"Goo","usertype":"CUSTOMER"},"approvedBy":{"id":0,"username":null,"password":null,"fullname":null,"usertype":null},"balance":0.0,"status":"PENDING","userId":3}]
+2021-05-14 12:48:39,855 [INFO] org.shivacorp.main.ShivacorpMain:Request: (PUT) /account/status
+2021-05-14 12:48:40,251 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":100001,"user":{"id":3,"username":"goo","password":null,"fullname":"Goo","usertype":"CUSTOMER"},"approvedBy":{"id":1,"username":"admin","password":"admin","fullname":"admin","usertype":"EMPLOYEE"},"balance":0.0,"status":"APPROVED","userId":3}
+2021-05-14 12:48:42,148 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/status/pending
+2021-05-14 12:48:42,254 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"No pending accounts"}
+2021-05-14 12:49:00,657 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/id/100001
+2021-05-14 12:49:00,687 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /transactions/accountid/100001
+2021-05-14 12:49:00,758 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":100001,"user":{"id":3,"username":"goo","password":null,"fullname":"Goo","usertype":"CUSTOMER"},"approvedBy":{"id":1,"username":"admin","password":null,"fullname":"admin","usertype":"EMPLOYEE"},"balance":0.0,"status":"APPROVED","userId":3}
+2021-05-14 12:49:00,784 [INFO] org.shivacorp.main.ShivacorpMain:Response: [{"id":3,"datetime":1621021720157,"transactionType":"ACCOUNT_APPROVED","accountId":100001,"amount":0.0}]
+2021-05-14 12:49:16,444 [INFO] org.shivacorp.main.ShivacorpMain:Request: (PUT) /transfer/100001/100000/100
+2021-05-14 12:49:16,672 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"Account 100001 has insufficient funds to cover transfer"}
+2021-05-14 12:49:21,386 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/id/100002
+2021-05-14 12:49:21,409 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /transactions/accountid/100002
+2021-05-14 12:49:21,500 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":100002,"user":{"id":3,"username":"goo","password":null,"fullname":"Goo","usertype":"CUSTOMER"},"approvedBy":{"id":1,"username":"admin","password":null,"fullname":"admin","usertype":"EMPLOYEE"},"balance":0.0,"status":"APPROVED","userId":3}
+2021-05-14 12:49:21,528 [INFO] org.shivacorp.main.ShivacorpMain:Response: [{"id":2,"datetime":1621021714195,"transactionType":"ACCOUNT_APPROVED","accountId":100002,"amount":0.0}]
+2021-05-14 12:49:25,654 [INFO] org.shivacorp.main.ShivacorpMain:Request: (PUT) /transfer/100002/100000/100
+2021-05-14 12:49:25,788 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"Account 100002 has insufficient funds to cover transfer"}
+2021-05-14 12:49:39,410 [INFO] org.shivacorp.main.ShivacorpMain:Request: (PUT) /deposit/100002/1000
+2021-05-14 12:49:39,609 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":100002,"user":{"id":3,"username":"goo","password":null,"fullname":"Goo","usertype":"CUSTOMER"},"approvedBy":{"id":1,"username":"admin","password":null,"fullname":"admin","usertype":"EMPLOYEE"},"balance":1000.0,"status":"APPROVED","userId":3}
+2021-05-14 12:49:47,546 [INFO] org.shivacorp.main.ShivacorpMain:Request: (PUT) /transfer/100002/100000/100
+2021-05-14 12:49:47,926 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":100002,"user":{"id":3,"username":"goo","password":null,"fullname":"Goo","usertype":"CUSTOMER"},"approvedBy":{"id":1,"username":"admin","password":null,"fullname":"admin","usertype":"EMPLOYEE"},"balance":900.0,"status":"APPROVED","userId":3}
+2021-05-14 12:50:05,726 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /transactions/datetime/2021-05-14
+2021-05-14 12:50:05,846 [INFO] org.shivacorp.main.ShivacorpMain:Response: [{"id":1,"datetime":1621021605432,"transactionType":"ACCOUNT_APPROVED","accountId":100000,"amount":0.0},{"id":2,"datetime":1621021714195,"transactionType":"ACCOUNT_APPROVED","accountId":100002,"amount":0.0},{"id":3,"datetime":1621021720157,"transactionType":"ACCOUNT_APPROVED","accountId":100001,"amount":0.0},{"id":4,"datetime":1621021779548,"transactionType":"DEPOSIT","accountId":100002,"amount":1000.0},{"id":5,"datetime":1621021787746,"transactionType":"TRANSFER_DEBIT","accountId":100002,"amount":100.0},{"id":6,"datetime":1621021787868,"transactionType":"TRANSFER_CREDIT","accountId":100000,"amount":100.0}]
+2021-05-14 12:50:11,490 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /transactions/amount/0
+2021-05-14 12:50:11,589 [INFO] org.shivacorp.main.ShivacorpMain:Response: [{"id":1,"datetime":1621021605432,"transactionType":"ACCOUNT_APPROVED","accountId":100000,"amount":0.0},{"id":2,"datetime":1621021714195,"transactionType":"ACCOUNT_APPROVED","accountId":100002,"amount":0.0},{"id":3,"datetime":1621021720157,"transactionType":"ACCOUNT_APPROVED","accountId":100001,"amount":0.0}]
+2021-05-14 12:50:18,096 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /transactions/amount/900
+2021-05-14 12:50:18,155 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"No transactions"}
+2021-05-14 12:50:22,120 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /transactions/amount/1000
+2021-05-14 12:50:22,192 [INFO] org.shivacorp.main.ShivacorpMain:Response: [{"id":4,"datetime":1621021779548,"transactionType":"DEPOSIT","accountId":100002,"amount":1000.0}]
+2021-05-18 01:02:24,288 [INFO] org.shivacorp.main.ShivacorpMain:App started
+2021-05-18 01:04:08,255 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /employee/admin
+2021-05-18 01:04:08,970 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":1,"username":"admin","password":"admin","fullname":"admin","usertype":"EMPLOYEE"}
+2021-05-18 01:04:24,785 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /employee/admin
+2021-05-18 01:04:24,855 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":1,"username":"admin","password":"admin","fullname":"admin","usertype":"EMPLOYEE"}
+2021-05-18 01:04:40,035 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /employee/admin
+2021-05-18 01:04:40,201 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":1,"username":"admin","password":"admin","fullname":"admin","usertype":"EMPLOYEE"}
+2021-05-18 01:05:18,692 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /employee/admin
+2021-05-18 01:05:18,755 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":1,"username":"admin","password":"admin","fullname":"admin","usertype":"EMPLOYEE"}
+2021-05-18 01:05:21,314 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /employee/admin
+2021-05-18 01:05:21,384 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":1,"username":"admin","password":"admin","fullname":"admin","usertype":"EMPLOYEE"}
+2021-05-18 01:05:49,312 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /employee/admin
+2021-05-18 01:05:49,407 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":1,"username":"admin","password":"admin","fullname":"admin","usertype":"EMPLOYEE"}
+2021-05-21 02:25:38,768 [INFO] org.shivacorp.main.ShivacorpMain:App started
+2021-05-21 02:25:47,375 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /customer/admin
+2021-05-21 02:25:47,892 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"Invalid username"}
+2021-05-21 02:25:53,658 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /customer/foo
+2021-05-21 02:25:53,711 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":2,"username":"foo","password":"foo","fullname":"Foo Foo","usertype":"CUSTOMER"}
+2021-05-21 02:25:53,901 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/customerid/2
+2021-05-21 02:25:54,015 [INFO] org.shivacorp.main.ShivacorpMain:Response: [{"id":100000,"user":{"id":2,"username":"foo","password":null,"fullname":"Foo Foo","usertype":"CUSTOMER"},"approvedBy":{"id":1,"username":"admin","password":null,"fullname":"admin","usertype":"EMPLOYEE"},"balance":100.0,"status":"APPROVED","userId":2}]
+2021-05-21 02:27:06,379 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /employee/admin
+2021-05-21 02:27:06,432 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"id":1,"username":"admin","password":"admin","fullname":"admin","usertype":"EMPLOYEE"}
+2021-05-21 02:27:06,546 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/status/pending
+2021-05-21 02:27:06,606 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"No pending accounts"}
+2021-05-21 02:35:50,977 [INFO] org.shivacorp.main.ShivacorpMain:Request: (GET) /accounts/status/pending
+2021-05-21 02:35:51,061 [INFO] org.shivacorp.main.ShivacorpMain:Response: {"message":"No pending accounts"}
