@@ -1,7 +1,7 @@
 # ShivaCorp Banking App 2.0
 
 ## Project Description
-An extension of [ShivaCorp Banking App 1.0](https://github.com/petergrace1618/revature-project-0.git) which was a console app simulating a banking experience. Version 2.0 adds a web fronted and some added functionality. 
+An extension of [ShivaCorp Banking App 1.0](https://github.com/petergrace1618/revature-project-0.git) which was a console app simulating a banking experience. Version 2.0 adds a web frontend and a few added features. 
 
 ## Technologies used
 Front end:
