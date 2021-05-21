@@ -1,7 +1,7 @@
-# ShivaCorp Banking App
+# ShivaCorp Banking App 2.0
 
 ## Project Description
-An extension of [Revature Project 0](https://github.com/petergrace1618/revature-project-0.git) which was a console app. Project 1 is a web application utilizing Bootstrap on the front end and Javalin/PostgreSQL on the backend.
+An extension of [ShivaCorp Banking App 1.0](https://github.com/petergrace1618/revature-project-0.git) which was a console app simulating a banking experience. Version 2.0 adds a web fronted and some added functionality. 
 
 ## Technologies used
 Front end:
