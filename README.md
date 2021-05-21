@@ -19,7 +19,9 @@ Back end:
 Customers can: 
 - Create a login
 - Apply for an account
-- Deposit, withdraw, and transfer funds
+- Deposit funds
+- Withdraw funds
+- Transfer funds
 - View transactions per account
 
 Employees can:
@@ -41,15 +43,13 @@ Employees can:
   - Transaction type: (ACCOUNT_CREATED, DEPOSIT, WITHDRAWAL, TRANSFER_CREDIT, TRANSFER_DEBIT
 
 ## Getting Started
-
 To clone the repository
-```bash
-git clone https://github.com/petergrace1618/revature-project1/
+```
+git clone https://github.com/petergrace1618/revature-project1.git
 ```
 
 ## Usage
-
-
+Open 
 
 ## License
 Freely available under the [GNU General Public License version 3](https://opensource.org/licenses/GPL-3.0)
